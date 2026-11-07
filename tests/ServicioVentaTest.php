@@ -100,6 +100,12 @@ class ServicioVentaTest extends TestCase
         $this->assertEqualsWithDelta(100.00, ServicioVenta::calcularTotal(100.00), 0.001);
     }
 
+    public function testAplicaDescuentoCuandoSubtotalEs100Punto01(): void
+    {
+        $this->assertEqualsWithDelta(5.00, ServicioVenta::calcularDescuento(100.01), 0.001);
+        $this->assertEqualsWithDelta(95.01, ServicioVenta::calcularTotal(100.01), 0.001);
+    }
+
     public function testCalculaTotalConDescuentoCuandoSubtotalEsCienPuntoUno(): void
     {
         $items = [

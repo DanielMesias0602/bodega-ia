@@ -2,7 +2,12 @@
 
 function conectar_test(): PDO
 {
-    $config = require __DIR__ . '/env_test.php';
+    $configFile = __DIR__ . '/env_test.php';
+    if (!is_file($configFile)) {
+        $configFile = __DIR__ . '/env_test.ejemplo.php';
+    }
+
+    $config = require $configFile;
 
     $dsn = sprintf(
         'mysql:host=%s;dbname=%s;charset=utf8mb4',

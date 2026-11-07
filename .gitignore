@@ -1,4 +1,8 @@
 /config/env.php
+config/env.php
+config/env_test.php
+**/config/env.php
+**/config/env_test.php
 .phpunit.result.cache
 phpunit.phar
 phpunit-11.5.57.phar
