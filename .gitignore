@@ -1,0 +1,4 @@
+/config/env.php
+.phpunit.result.cache
+phpunit.phar
+phpunit-11.5.57.phar
